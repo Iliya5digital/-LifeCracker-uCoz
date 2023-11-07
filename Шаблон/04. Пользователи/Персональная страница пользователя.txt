@@ -1,0 +1,145 @@
+<html lang="ru">
+<head>
+<title>Информация о пользователе</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#362e3d">
+<link rel="preload" href="/css/common.css" as="style">
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/css/engine.css" as="style">
+<link rel="preload" href="/css/fontawesome.css" as="style">
+
+<link rel="preload" href="/webfonts/arsenal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/arsenal-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin>
+
+<link type="text/css" rel="stylesheet" href="/_st/my.css" />
+<link rel="shortcut icon" href="/images/favicon.svg" />
+</head>
+
+<body>
+<div class="wrapper">
+<div class="wrapper-container wrapper-main">
+<header class="header">
+$GLOBAL_AHEADER$
+</header> <!-- END HEADER -->
+
+<div class="content">
+
+<div class="cols">
+<main class="col-main">
+<div class="sect">
+<div class="sect__content">
+
+<div class="form">
+<h1 class="form__title">Просмотр профиля </h1>
+<div class="usp">
+<div class="usp__columns d-flex jc-flex-start ai-center">
+<div class="usp__left"><div class="usp__img img-fit-cover"><img src="<?if($_AVATAR_URL$)?>$_AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" alt=""/></div></div>
+<div class="usp__middle stretch-free-width">
+<h2 class="usp__name">$_USERNAME$</</h2>
+<div class="usp__group">Группа: <?if($_GROUP_NAME$='Администраторы')?><b style="color: red;">$_GROUP_NAME$</b><?else?>$_GROUP_NAME$<?endif?></div>
+</div>
+
+<div class="usp__right">
+<div class="usp__btn"><?if($_IS_OWN_PROFILE$)?>
+$_EMAIL$<?if($_EMAIL_IS_HIDDEN$)?> <span class="profile-small">(Адрес скрыт)</span><?endif?>
+<?else?>
+<?if($MODER_PANEL$)?>
+<a href="mailto:$_EMAIL$">$_EMAIL$</a>
+<?if($_EMAIL_IS_HIDDEN$)?><span style="font-size:7pt">(Адрес скрыт)</span><?endif?>
+<?if(!$_EMAIL_IS_VERIFIED$)?><span style="color:red;" title="Not verified e-mail">*</span><?endif?>
+<?else?>
+<?if($_SEND_EMAIL_URL$)?>
+<a href="$_SEND_EMAIL_URL$">Написать письмо пользователю</a>
+<?else?>
+$_EMAIL$
+<?endif?>
+<?endif?>
+<?endif?>
+<?if($_EMAIL_VERIFICATION_URL$)?>
+(<b><a href="$_EMAIL_VERIFICATION_URL$"><span style="color:red">Подтвердить e-mail</span></a></b>)
+<?endif?></div>
+<?if($_PM_SEND_URL$)?><div class="usp__btn"><a href="$_PM_SEND_URL$" title="Отправить личное сообщение">Отправить ЛС</a></div><?endif?>
+</div>
+</div>
+
+<div class="usp__meta d-flex jc-space-between ai-center">
+<?if($_STATUS$ || $_IS_OWN_PROFILE$)?>
+<?if($_IS_OWN_PROFILE$)?>
+<div class="usp__status usp__status--online">В сети</div>
+<?else?>
+<div class="usp__status usp__status--offline">Не в сети</div>
+<?endif?><?endif?>
+
+<div class="usp__activity d-flex jc-flex-start stretch-free-width">
+<div>Публикаций<div>$_LOAD_ENTRIES$</div></div>
+<div>Комментариев<div>$_COM_ENTRIES$</div></div>
+</div> 
+
+<?if($_CHANGE_DETAILS_URL$)?><div class="usp__btn"><a href="$_CHANGE_DETAILS_URL$">редактировать</a></div><?endif?>
+</div>
+
+<ul class="usp__list d-flex jc-space-between">
+<li><span>Регистрация:</span> $_REG_TIME$</li>
+<li><span>Заходил(а):</span> $_LOG_TIME$</li>
+<li><span>Полное имя:</span> <?if($_NAME$)?>$_NAME$<?else?>Не указано<?endif?></li>
+<li><span>Место жительства:</span> <?if($_COUNTRY$)?>$_COUNTRY$<?else?><?if($_STATE$)?>$_STATE$<?else?><?if($_CITY$)?>$_CITY$<?endif?><?endif?><?endif?></li>
+<li><span>Подпись:</span> <?if($_SIGNATURE$)?>$_SIGNATURE$<?else?>Не указана<?endif?></li>
+</ul>
+
+<ul class="usp__list d-flex jc-space-between">
+<?if($_LOAD_ENTRIES$)?><li class="no-label"><a href="$_LOAD_ACTIVITY_URL$">Просмотреть все публикации</a></li><?else?><li class="no-label">Просмотреть все публикации</li><?endif?>
+<?if($_COM_ENTRIES$)?><li class="no-label"><a href="$_COM_ACTIVITY_URL$">Последние комментарии</a></li><?else?><li class="no-label">Последние комментарии</li><?endif?>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+
+<aside class="col-side">
+$GLOBAL_CLEFTER$
+</aside>
+
+</div>
+
+</div> <!-- END CONTENT -->
+
+<footer class="footer vw100">
+$GLOBAL_BFOOTER$
+</footer> <!-- END FOOTER -->
+
+</div> <!-- END WRAPPER-MAIN -->
+</div> <!-- END WRAPPER -->
+
+<?if($USER_LOGGED_IN$)?>
+<div class="login login--logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__avatar img-fit-cover"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?><?endif?>" title="$USERNAME$" alt="$USERNAME$" /></div>
+<div class="login__title stretch-free-width ws-nowrap">$USERNAME$ <?if($USER_GROUP$='Администраторы')?><a href="/panel/" target="_blank">Админка</a><?endif?></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<ul class="login__content login__menu d-flex jc-space-between">
+<?if($ADD_ENTRY_LINK$)?><li><a href="$ADD_ENTRY_LINK$"><span class="fal fa-plus"></span>Добавить пост</a></li><?endif?>
+<li><a href="$PERSONAL_PAGE_LINK$"><span class="fal fa-address-card"></span>Мой профиль</a></li>
+<li><a href="$PM_URL$"><span class="fal fa-envelope"></span>Сообщения: ($IS_NEW_PM$)</a></li>
+<li><a href="/index/11"><span class="fal fa-cog"></span>Настройки</a></li>
+<li><a href="/index/34-$USER_ID$"><span class="fal fa-comments"></span>Мои комментарии</a></li>
+<li><a href="$LOGOUT_LINK$"><span class="fal fa-sign-out"></span>Выйти</a></li>
+</ul>
+</div>
+<?else?>
+<div class="login login--not-logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__title stretch-free-width ws-nowrap">Войти <a href="$REGISTER_LINK$">Регистрация</a></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+$LOGIN_FORM$
+</div>
+<?endif?>
+<script src="/js/libs.js"></script>
+</body>
+</html>

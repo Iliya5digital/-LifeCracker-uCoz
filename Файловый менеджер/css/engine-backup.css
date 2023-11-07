@@ -1,0 +1,98 @@
+
+/*--- РЕДКО ИСПОЛЬЗУЕТСЯ, ПОЭТОМУ ВЫРЕЗАНО ИЗ ОСНОВНОГО ФАЙЛА. ЕСЛИ НУЖНО, ТО КОПИРУЕМ ОБРАТНО ---*/
+
+/*--- CALENDAR---*/
+.calendar { font-size:13px; width: 100%; color:#444; }
+.calendar td, .calendar th { padding: 7px 0; vertical-align: middle; text-align: center; }
+.calendar td.day, .calendar td.day-active-v, .calendar th.workday { border: 1px solid #e9e9e9; background-color: #fff; }
+.calendar td.weekday, .calendar td.day-active, .calendar th.weekday { border: 1px solid #e3e3e3; background-color: #ebeef3; }
+.weekday-active-v, .day-active-v, .weekday-active, .day-active { font-weight: bold; }
+.day-active a, .day-active-v a {color:#3c6695;}
+.calendar td.day-current { background: #fd8924; }
+.day-current a, .day-current { color: #fff !important; }
+th.monthselect { text-align: left; padding-bottom:5px; }
+th.monthselect b { font-weight: normal; }
+th.monthselect center { text-align: right; }
+.archives {display:block; color:#3c6695; margin-bottom:7px; padding-left:15px; font-size:14px;}
+.archives:hover {text-decoration:underline;}
+.archives b {font-weight:700;}
+.archives + br, #dle_news_archive_link br {display:none;}
+#dle_news_archive_link .archives {color:#000; margin-bottom:0;}
+
+
+/* --- TEXT [CODE] --- */
+pre {display: block; padding: 10px; background: #3F3F3F; color: #DCDCDC; text-shadow: 0 1px 1px #000; 
+	box-shadow: inset 0 2px 15px rgba(0,0,0,.5); font-family: Consolas,'Courier New',monospace;
+	font-size: 14px; line-height: 18px; border-radius: 4px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
+pre .tag, pre.css .class, pre.css .id, pre.lisp .title, pre.nginx .title,
+pre .request, pre .status, pre .clojure .attribute {color:#E3CEAB}
+pre.django .template_tag, pre.django .variable, pre.django .filter .argument {color:#DCDCDC}
+pre .number, pre .date {color:#8CD0D3}
+pre.dos .envvar, pre.dos .stream, pre .variable, pre.apache .sqbracket {color:#EFDCBC}
+pre.dos .flow, pre.diff .change, pre.python .exception, pre.python .built_in,
+pre .literal, pre.tex .special {color:#EFEFAF}
+pre.diff .chunk, pre .subst {color:#8F8F8F}
+pre.dos .keyword, pre.python .decorator, pre .title, pre.haskell .type,
+pre.diff .header, pre.ruby .class .parent, pre.apache .tag, pre.nginx .built_in,
+pre.tex .command, pre .prompt {color:#efef8f} 
+pre.dos .winutils, pre.ruby .symbol, pre.ruby .symbol .string,
+pre.ruby .string {color:#DCA3A3} 
+pre.diff .deletion, pre .string, pre .tag .value, pre .preprocessor, pre .pragma,
+pre .built_in, pre.sql .aggregate, pre .javadoc, pre.smalltalk .class,
+pre.smalltalk .localvars, pre.smalltalk .array, pre.css .rules .value,
+pre .attr_selector, pre .pseudo, pre.apache .cbracket, pre.tex .formula,
+pre.coffeescript .attribute {color:#CC9393} 
+pre .shebang, pre.diff .addition, pre .comment, pre.java .annotation,
+pre .template_comment, pre .pi, pre .doctype {color:#7F9F7F}
+pre.coffeescript .javascript, pre.javascript .xml, pre.tex .formula, pre.xml .javascript,
+pre.xml .vbscript, pre.xml .css, pre.xml .cdata{color: inherit;}
+.hljs-comment, .hljs-quote {color: #a0a1a7;font-style: italic;}
+.hljs-doctag, .hljs-keyword, .hljs-formula {color: #a626a4;}
+.hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst {color: #e45649;}
+.hljs-literal {color: #0184bb;}
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string {color: #50a14f;}
+.hljs-built_in, .hljs-class .hljs-title {color: #c18401;}
+.hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr,
+.hljs-selector-pseudo, .hljs-number {color: #986801;}
+.hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title {color: #4078f2;}
+.hljs-emphasis {font-style: italic;}
+.hljs-strong {font-weight: bold;}
+.hljs-link {text-decoration: underline;}
+
+
+/*--- MARK AND SHARE ---*/
+#marker-bar,#txtselect_marker{display:block;visibility:hidden;position:absolute;bottom:0;z-index:1200;opacity:0;transition:opacity .4s, visibility .1s linear .4s}
+#txtselect_marker{cursor:pointer;width:32px;height:32px;background:url(../dleimages/marker.png) -0px -0px no-repeat}
+#txtselect_marker:hover{background-position:-0px -32px}
+#marker-bar{border:1px solid #ccc;border-radius:15px;background:#fff;padding:5px 10px;cursor:default;box-shadow:0px 0px 4px #ccc}
+#marker-bar.show,#txtselect_marker.show{visibility:visible;transition:opacity .4s, visibility 0s;opacity:1}
+#marker-bar .masha-social,#marker-bar .masha-marker{cursor:pointer;display:block;margin:0 5px;float:left}
+#marker-bar .masha-marker{line-height:1em;color:#aaa;border-bottom:1px dotted #aaa;margin-right:10px}
+#marker-bar .masha-marker:hover{color:#ea3e26;border-color:#ea3e26}
+.user_selection,.user_selection_true{background:#c4f47d;padding:2px 0}
+.user_selection a.txtsel_close,.user_selection_true a.txtsel_close{display:none}
+.user_selection .closewrap,.user_selection_true .closewrap{position:relative}
+.user_selection.hover a.txtsel_close,.user_selection_true.hover a.txtsel_close{display:inline-block;position:absolute;top:-7px;left:-5px;width:33px;height:33px;background:url(../dleimages/closemarker.png) -0px -0px no-repeat}
+.user_selection.hover a.txtsel_close:hover,.user_selection_true.hover a.txtsel_close:hover{background-position:-0px -33px}
+#share-popup{background:#fff;border:1px solid #aaa;border-radius:5px;box-shadow:0 0 5px rgba(0,0,0,0.5);position:absolute;width:414px;display:none;z-index:100;padding:10px 0;opacity:0;transition:opacity .4s, visibility .1s linear .4s}
+#share-popup.show{display:block;opacity:1;transition:opacity .4s, visibility 0s}
+#share-popup .social{padding:0 0 10px 17px;height:40px}
+#share-popup .social p{padding-bottom:10px;margin:0;font-weight:bold}
+#share-popup .social ul{list-style:none;margin:0;padding:0}
+#share-popup .social ul li{float:left;margin-right:20px;padding-top:2px;position:relative}
+#share-popup .social ul a{text-decoration:none;font-size:11px;display:inline-block;color:#aaa;padding-left:25px}
+#share-popup .social ul a:hover{text-decoration:underline;color:#ea3e26}
+#share-popup .social a span{cursor:pointer;width:20px;height:20px;background:url(../dleimages/social-icons.png) 20px 20px no-repeat;position:absolute;left:0;top:0}
+#share-popup .social .tw span{background-position:0 -20px}
+#share-popup .social .tw:hover span{background-position:0 0}
+#share-popup .social .fb span{background-position:-20px -20px}
+#share-popup .social .fb:hover span{background-position:-20px 0}
+#share-popup .social .vk span{background-position:-40px -20px}
+#share-popup .social .vk:hover span{background-position:-40px 0}
+#share-popup .social .gp span{background-position:-60px -20px}
+#share-popup .social .gp:hover span{background-position:-60px 0}
+#share-popup .link{clear:both;border-top:1px solid #d9d9d9;padding:10px 5px 0 10px;line-height:1.2;overflow:hidden;margin:0 7px}
+#share-popup .link p{font-weight:bold;padding:0 0 3px 0;margin:0}
+#share-popup .link span{color:#999;font-size:10px;display:block;padding-top:3px}
+#share-popup .link a{display:block}
+    

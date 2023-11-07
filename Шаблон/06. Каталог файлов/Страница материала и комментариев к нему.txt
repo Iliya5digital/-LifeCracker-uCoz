@@ -1,0 +1,254 @@
+<html lang="ru">
+<head>
+<title>$ENTRY_TITLE$ - $CAT_NAME$ <?if($SECTION_NAME$)?>- $SECTION_NAME$<?endif?> - $MODULE_NAME$ - $SITE_NAME$</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#362e3d">
+<link rel="preload" href="/css/common.css" as="style">
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/css/engine.css" as="style">
+<link rel="preload" href="/css/fontawesome.css" as="style">
+
+<link rel="preload" href="/webfonts/arsenal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/arsenal-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin>
+
+<link type="text/css" rel="stylesheet" href="/_st/my.css" />
+<link rel="shortcut icon" href="/images/favicon.svg" />
+</head>
+
+<body>
+<div class="wrapper">
+<div class="wrapper-container wrapper-main">
+<header class="header">
+$GLOBAL_AHEADER$
+</header> <!-- END HEADER -->
+
+<div class="content">
+
+<div class="page ignore-select page--cols">
+<main class="page__col-main">
+<article class="page__article">
+
+<div class="page__poster img-fit-cover">
+<header class="page__header d-flex fd-column jc-space-between">
+<div class="page__meta d-flex">
+<div class="page__meta-item page__meta-item--author">$USER$</div>
+<div class="page__meta-item icon-at-left"><span class="fal fa-clock"></span>$ADD_DATE$, $ADD_TIME$</div>
+<div class="page__meta-item icon-at-left"><span class="fal fa-comment-alt-dots"></span><?if($COM_NUM_ENTRIES$)?>$COM_NUM_ENTRIES$<?else?>0<?endif?></div>
+<?if($MODER_PANEL_RIGHT$)?><div style="float: right;">$MODER_PANEL_RIGHT$</div><?endif?>
+</div>
+
+<h1>$ENTRY_TITLE$</h1>
+<time class="page__date" datetime="$ADD_DATE$, $ADD_TIME$">Добавлено: $ADD_DATE$, $ADD_TIME$</time>
+</header>
+
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$ENTRY_TITLE$">
+</div> <!-- END PAGE POSTER -->
+
+<div class="page__intro"><?if(len($BRIEF$)>300)?><?substr($BRIEF$,0,297)?>...<?else?>$BRIEF$<?endif?></div>
+<div class="page__text full-text clearfix">$MESSAGE$</div>
+
+<?if($FILE_URL$)?>
+<a href="$FILE_URL$" class="fdl-btn ignore-select" style="margin-top: 20px;">
+<div class="fdl-btn-title">$ENTRY_TITLE$</div>
+<div class="fdl-btn-size fx-col fx-center">Размер: $FILE_SIZE$</div>
+<div class="fdl-btn-footer fx-row fx-middle">
+<div class="fdl-btn-caption fx-1 ws-nowrap">Название файла: <?substr($FILE_DIRECT_URL$, strrpos($FILE_DIRECT_URL$,'/') +1)?></div>
+<div class="fdl-btn-dl">Скачали $LOADS$</div>
+</div>
+<div class="fdl-btn-icon"><span class="fal fa-arrow-to-bottom"></span></div>
+</a>
+<?endif?>
+
+<div class="page__prev-next d-flex">
+<?if($PREV_ENTRY$)?>
+<span class="page__prev-next-link icon-at-left flex-grow-1">
+<div><span class="fal fa-long-arrow-left"></span>$PREV_ENTRY$</div>
+</span>
+<?endif?>
+
+<?if($NEXT_ENTRY$)?>
+<span class="page__prev-next-link icon-at-right flex-grow-1">
+<div><span class="fal fa-long-arrow-right"></span>$NEXT_ENTRY$</div>
+</span>
+<?endif?>
+</div>
+
+<div class="page__subscribe d-flex ai-center">
+<div class="page__subscribe-caption"><b>Подпишитесь</b> <br>И будьте в курсе первыми!</div>
+<div class="page__subscribe-form flex-grow-1">
+<input type="text" placeholder="Введите ваш e-mail">
+<button><span class="fal fa-paper-plane"></span></button>
+</div>
+</div>
+
+<?if($TAGS$)?><div class="page__tags d-flex ai-center"><span class="fal fa-tags"></span>$TAGS$</div> <script>$('noindex').html(function(){return $(this).html().replace(/,/g, "")});</script><?endif?>
+
+<div class="page__footer d-flex jc-space-between ai-center">
+<div class="page__rating d-flex flex-grow-1">
+<script src="/js/getRate2.js"></script>
+<a href="#" onclick="getRate(1,$ID$,'load');return false" data-toggle="tooltip" data-placement="top" title="Мне нравится!"><span class="fal fa-thumbs-up"></span><span id="plus_$ID$" class="ignore-select">0</span></a>
+<a href="#" onclick="getRate(-1,$ID$,'load');return false" data-toggle="tooltip" data-placement="top" title="Мне не нравится!"><span class="fal fa-thumbs-down"></span><span id="minus_$ID$" class="ignore-select">0</span></a>
+<script type="text/javascript">setRating($RATING$,$RATED$,$ID$)</script>
+</div>
+<div class="page__btn-comments btn icon-at-left js-show-comments"><span class="fal fa-comment-alt-dots"></span>Обсудить (<?if($COM_NUM_ENTRIES$)?>$COM_NUM_ENTRIES$<?else?>0<?endif?>)</div>
+</div>
+
+<footer class="page__footer d-flex jc-space-between ai-center page__footer--last">
+<div class="page__error d-flex ai-center flex-grow-1">
+<div class="page__error-btns d-flex"><div>Ctrl</div> <div>Enter</div></div>
+<div class="page__error-text flex-grow-1"><div>Заметили ош<span>Ы</span>бку?</div> Выделите текст и нажмите <span>Ctrl+Enter</span></div>
+</div>
+<a href="#" target="_blank" class="page__yadzen"><div class="page__yadzen-label">Мы в</div></a>
+</footer>
+ 
+<div class="sect sect--related">
+<div class="sect__title sect__header">Смотрите также:</div>
+<div class="side-block__content">$MYINF_7$</div>
+</div>
+
+<?if($COM_IS_ACTIVE$)?>
+<div class="page__comments">
+<h2 class="page__comments-title sect__title">Комментарии</h2>
+<div class="page__comments-info">
+<span class="fal fa-exclamation-circle"></span>
+Минимальная длина комментария - 50 знаков. комментарии модерируются
+</div>
+
+<?if($COM_CAN_ADD$)?>
+$COM_ADD_FORM$
+<?else?>
+<?if($USER_LOGGED_IN$)?>
+<?else?>
+<div class="message-info">
+<div class="message-info__title">Ошибка!</div>
+<div class="message-info__content">Добавлять комментарии могут только зарегистрированные пользователи.</div>
+</div>
+<?endif?>
+<?endif?>
+
+<div class="page__comments-list <?if($COM_NUM_ENTRIES$)?><?else?>page__comments-list--not-comments<?endif?>" id="page__comments-list">
+<?if($COM_NUM_ENTRIES$)?><?else?><div class="message-info">Комментариев еще нет. Вы можете стать первым!</div><?endif?>
+<?if($COM_CAN_READ$)?>$COM_BODY$<?endif?>
+<?if($COM_PAGE_SELECTOR$)?>
+<div class="pagination ignore-select" id="pagination">
+<div class="pagination__pages d-flex jc-center" style="padding-bottom: 20px;">$COM_PAGE_SELECTOR$</div>
+</div>
+<?endif?>
+</div>
+
+<div class="page__speedbar ws-nowrap speedbar"><a href="$HOME_PAGE_LINK$">$SITE_NAME$</a><?if($SECTION_NAME$)?> &raquo; <a href="$SECTION_URL$">$SECTION_NAME$</a><?endif?><?if($CAT_NAME$)?> &raquo; <a href="$CAT_URL$">$CAT_NAME$</a><?endif?> &raquo; $ENTRY_TITLE$</div>
+</div>
+<?endif?>
+</article>
+</main>
+ 
+<aside class="page__col-left">
+<div class="side-block">
+<div class="side-block__title">Сейчас читают</div>
+<div class="side-block__content">$MYINF_5$</div>
+</div>
+
+<div class="side-block">
+<div class="side-block__title">Свежее</div>
+<div class="side-block__content">$MYINF_6$</div>
+</div>
+
+<div class="side-block side-block--sticky side-block--nobg"><img src="/images/rkl.png" loading="lazy" alt=""></div>
+</aside>
+
+<aside class="page__col-right">
+$GLOBAL_CLEFTER$
+</aside>
+</div>
+
+</div> <!-- END CONTENT -->
+
+<footer class="footer vw100">
+$GLOBAL_BFOOTER$
+</footer> <!-- END FOOTER -->
+
+</div> <!-- END WRAPPER-MAIN -->
+</div> <!-- END WRAPPER -->
+
+<?if($USER_LOGGED_IN$)?>
+<div class="login login--logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__avatar img-fit-cover"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?><?endif?>" title="$USERNAME$" alt="$USERNAME$" /></div>
+<div class="login__title stretch-free-width ws-nowrap">$USERNAME$ <?if($USER_GROUP$='Администраторы')?><a href="/panel/" target="_blank">Админка</a><?endif?></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<ul class="login__content login__menu d-flex jc-space-between">
+<?if($ADD_ENTRY_LINK$)?><li><a href="$ADD_ENTRY_LINK$"><span class="fal fa-plus"></span>Добавить пост</a></li><?endif?>
+<li><a href="$PERSONAL_PAGE_LINK$"><span class="fal fa-address-card"></span>Мой профиль</a></li>
+<li><a href="$PM_URL$"><span class="fal fa-envelope"></span>Сообщения: ($IS_NEW_PM$)</a></li>
+<li><a href="/index/11"><span class="fal fa-cog"></span>Настройки</a></li>
+<li><a href="/index/34-$USER_ID$"><span class="fal fa-comments"></span>Мои комментарии</a></li>
+<li><a href="$LOGOUT_LINK$"><span class="fal fa-sign-out"></span>Выйти</a></li>
+</ul>
+</div>
+<?else?>
+<div class="login login--not-logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__title stretch-free-width ws-nowrap">Войти <a href="$REGISTER_LINK$">Регистрация</a></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+$LOGIN_FORM$
+</div>
+<?endif?>
+<script src="/js/libs.js"></script>
+<a href="#x" class="overlay" id="erorr"></a> <div class="popup"> $MFORM_2$ <a class="close"title="Закрыть" href="#close"></a> </div>
+<script type="text/javascript">
+$(document).on('keydown', 'body', function(event) {
+ if ((event.keyCode == 10 || event.keyCode == 13) && event.ctrlKey) {
+ var selectedText = '';
+ if (window.getSelection) {
+ var selection = window.getSelection();
+ selectedText = selection.toString();
+ } else if (document.selection) {
+ var range = document.selection.createRange();
+ selectedText = range.htmlText;
+ }
+ if ( selectedText != '' ) selectedText = 'В данном тексте есть ошибка - "' + selectedText + '"';
+ $('.popup form textarea[name="f3"]').text(selectedText).val(selectedText).focus().blur();
+ location.href = location.origin + location.pathname + '#erorr';
+ }
+})
+</script>
+
+<script src="/js/uLight.js"></script>
+<script type="text/javascript">
+function selectCode(a){
+var e=a.parentNode.parentNode.getElementsByTagName('code')[0];
+if(window.getSelection){
+var s=window.getSelection();
+if(s.setBaseAndExtent){
+s.setBaseAndExtent(e,0,e,e.innerText.length-1);
+}else{
+var r=document.createRange();
+r.selectNodeContents(e);
+s.removeAllRanges();
+s.addRange(r);}
+}else if(document.getSelection){
+var s=document.getSelection();
+var r=document.createRange();
+r.selectNodeContents(e);
+s.removeAllRanges();
+s.addRange(r);
+}else if(document.selection){
+var r=document.body.createTextRange();
+r.moveToElementText(e);
+r.select();}}
+// Замена Code на Выделить всё...
+codediv=document.getElementsByTagName('div');
+for(i=0;i<codediv.length;i++){
+if(codediv[i].className=="bbCodeBlock"){
+s=codediv.innerHTML;
+s=s.replace(/>Код</g,'><a href="#" onclick="selectCode(this);return false;">Выделить всё<\/a><').replace('<!--uzc-->','<!--uzc--><code>').replace('<!--\/uzc-->','<\/code><!--\/uzc-->');
+codediv.innerHTML=s;}}
+$(function() {prettyPrint();});
+</script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<div class="form">
+<?if($CAT_FL$)?>
+<div class="form__row">
+<label class="form__label">$CAT_SIGN$:</label>
+$CAT_FL$
+</div>
+<?endif?>
+
+<?if($TITLE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$TITLE_SIGN$:</label>
+$TITLE_FL$
+</div>
+<?endif?>
+
+<?if($HGU_TITLE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$HGU_TITLE_SIGN$:</label>
+$HGU_TITLE_FL$
+</div>
+<?endif?>
+
+<?if($SITE_DIRECT_URL_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$SITE_DIRECT_URL_SIGN$:</label>
+$SITE_DIRECT_URL_FL$
+</div>
+<?endif?>
+
+<?if($BRIEF_FL$)?>
+<div class="form__row form__row--textarea">
+<label class="form__label">Краткая часть:</label>
+<div class="bb-editor">
+$BRIEF_FL$
+</div>
+</div>
+<?endif?>
+
+<?if($MESSAGE_FL$)?>
+<div class="form__row form__row--textarea">
+<label class="form__label">Подробная часть:</label>
+<div class="bb-editor">
+$MESSAGE_FL$
+</div>
+</div>
+<?endif?>
+
+<?if($IMAGES_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$IMAGES_SIGN$:</label>
+<li style="list-style: none;">$IMAGES_FL$</li>
+</div>
+<?endif?>
+
+<?if($ATTACHMENTS_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$ATTACHMENTS_SIGN$:</label>
+$ATTACHMENTS_FL$
+</div>
+<?endif?>
+
+<?if($VERSION_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$VERSION_SIGN$:</label>
+$VERSION_FL$
+</div>
+<?endif?>
+
+<?if($LICENSE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$LICENSE_SIGN$:</label>
+$LICENSE_FL$
+</div>
+<?endif?>
+
+<?if($OS_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$OS_SIGN$:</label>
+$OS_FL$
+</div>
+<?endif?>
+
+<?if($LANGUAGE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$LANGUAGE_SIGN$:</label>
+$LANGUAGE_FL$
+</div>
+<?endif?>
+
+<?if($SCREEN_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$SCREEN_SIGN$:</label>
+$SCREEN_FL$
+</div>
+<?endif?>
+
+<?if($FILE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$FILE_SIGN$:</label>
+$FILE_FL$
+</div>
+<?endif?>
+
+<?if($REMOTEFILE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$REMOTEFILE_SIGN$:</label>
+$REMOTEFILE_FL$
+</div>
+<?endif?>
+
+<?if($REMOTESIZE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$REMOTESIZE_SIGN$:</label>
+$REMOTESIZE_FL$
+</div>
+<?endif?>
+
+<?if($NAME_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$NAME_SIGN$:</label>
+$NAME_FL$
+</div>
+<?endif?>
+
+<?if($EMAIL_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$EMAIL_SIGN$:</label>
+$EMAIL_FL$
+</div>
+<?endif?>
+
+<?if($PHONE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$PHONE_SIGN$:</label>
+$PHONE_FL$
+</div>
+<?endif?>
+
+<?if($SITE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$SITE_SIGN$:</label>
+$SITE_FL$
+</div>
+<?endif?>
+
+<?if($SOURCE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$SOURCE_SIGN$:</label>
+$SOURCE_FL$
+</div>
+<?endif?>
+
+<?if($DOCPAGE_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$DOCPAGE_SIGN$:</label>
+$DOCPAGE_FL$
+</div>
+<?endif?>
+
+<?if($TAGS_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$TAGS_SIGN$:</label>
+$TAGS_FL$
+</div>
+<?endif?>
+
+<div class="form__row form__row--wide">
+<table class="form__table">
+<!-- OTHER1..5 -->
+<?if($OTHER1_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER1_SIGN$:</td>
+<td class="xfields">$OTHER1_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER2_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER2_SIGN$:</td>
+<td class="xfields">$OTHER2_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER3_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER3_SIGN$:</td>
+<td class="xfields">$OTHER3_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER4_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER4_SIGN$:</td>
+<td class="xfields">$OTHER4_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER5_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER5_SIGN$:</td>
+<td class="xfields">$OTHER5_FL$</td>
+</tr>
+<?endif?>
+<!-- /OTHER1..5 -->
+
+<!-- FREE EXTRAFIELDS -->
+<?if($OTHER6_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER6_SIGN$:</td>
+<td class="xfields">$OTHER6_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER7_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER7_SIGN$:</td>
+<td class="xfields">$OTHER7_FL$</td>
+</tr>
+<?endif?>
+
+<?if($OTHER8_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$OTHER8_SIGN$:</td>
+<td class="xfields">$OTHER8_FL$</td>
+</tr>
+<?endif?>
+<!-- /FREE EXTRAFIELDS -->
+
+<?if($OTHER1_FL$ or $OTHER2_FL$ or $OTHER3_FL$ or $OTHER4_FL$ or $OTHER5_FL$ or $OTHER6_FL$ or $OTHER7_FL$ or $OTHER8_FL$)?><?endif?>
+
+<?if($FILTER1_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$FILTER1_SIGN$:</td>
+<td class="xfields">$FILTER1_FL$</td>
+</tr>
+<?endif?>
+
+<?if($FILTER2_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$FILTER2_SIGN$:</td>
+<td class="xfields">$FILTER2_FL$</td>
+</tr>
+<?endif?>
+
+<?if($FILTER3_FL$)?>
+<tr id="xfield_holder_screens">
+<td class="addnews">$FILTER3_SIGN$:</td>
+<td class="xfields">$FILTER3_FL$</td>
+</tr>
+<?endif?>
+</table>
+</div>
+
+<?if($ORDERING_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$ORDERING_SIGN$:</label>
+$ORDERING_FL$
+</div>
+<?endif?>
+
+<?if($ADD_TIME_FL$)?>
+<div class="form_row">
+<label class="form__label" for="alt_name">$ADD_TIME_SIGN$:</label>
+$ADD_TIME_FL$
+</div>
+<?endif?>
+
+<?if($PLACED_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$PLACED_SIGN$:</label>
+$PLACED_FL$
+</div>
+<?endif?>
+
+<?if($WHO_ADDED_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$WHO_ADDED_SIGN$:</label>
+$WHO_ADDED_FL$
+</div>
+<?endif?>
+
+<?if($TOPPERIOD_FL$)?>
+<div class="form__row">
+<label class="form__label" for="alt_name">$TOPPERIOD_SIGN$:</label>
+$TOPPERIOD_FL$
+</div>
+<?endif?>
+
+<?if($COM_NOTICE_FL$)?><div class="form__row form__row--check-group form__row--check-group-wide"><div class="checkbox">$COM_NOTICE_FL$</div></div><?endif?>
+<?if($MODER_OPT_FL$)?><div class="form__row form__row--check-group form__row--check-group-wide"><div class="checkbox">$MODER_OPT_FL$</div></div><?endif?>
+<style>
+.form__row--check-group label {display: block; margin-top: 5px;}
+.checkbox input {top: auto !important;margin-top: 0px !important;}
+</style>
+<?if($META_FIELDS$)?>$META_FIELDS$<?endif?>
+<?if($CROSSPOST_FORM$)?>$CROSSPOST_FORM$<?endif?>
+
+<?if($SECURE_FL$)?>
+<div class="form__row form__row--protect">
+<label class="form__label form__label--important" for="">$SECURE_SIGN$</label>
+$SECURE_FL$
+</div>
+<?endif?>
+
+<div class="form__row form__row--submit">
+$SUBMIT_FL$
+$CANCEL_FL$
+</div>
+
+</div>

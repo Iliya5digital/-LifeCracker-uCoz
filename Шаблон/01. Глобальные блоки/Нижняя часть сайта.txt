@@ -1,0 +1,29 @@
+<div class="footer__one d-flex ai-center">
+<ul class="footer__menu d-flex flex-grow-1">
+<li><a href="#">Россия</a></li>
+<li><a href="#">Мир</a></li>
+<li><a href="#">Экономика</a></li>
+<li><a href="#">Наука и техника</a></li>
+<li><a href="#">Культура</a></li>
+<li><a href="#">Спорт</a></li>
+</ul>
+
+<ul class="footer__socials d-flex">
+<li><a href="#" class="fb"><img src="/images/i-fb.svg" alt="" loading="lazy"></a></li>
+<li><a href="#" class="tw"><img src="/images/i-tw.svg" alt="" loading="lazy"></a></li>
+<li><a href="#" class="inst"><img src="/images/i-inst.svg" alt="" loading="lazy"></a></li>
+<li><a href="#" class="yt"><img src="/images/i-yt.svg" alt="" loading="lazy"></a></li>
+<li><a href="#" class="vk"><img src="/images/i-vk.svg" alt="" loading="lazy"></a></li>
+<li><a href="#" class="tlg"><img src="/images/i-tlg.svg" alt="" loading="lazy"></a></li>
+</ul>
+</div>
+
+<div class="footer__two d-flex ai-center vw100">
+<div class="logo footer__logo">$SITE_NAME$</div>
+<div class="footer__text flex-grow-1">
+© 2021 МИА «Россия сегодня», Сетевое издание РИА Новости.
+<br>Все права защищены искандерами и тополями.
+</div>
+
+<div class="footer__counter"> <img src="/images/counter.gif" loading="lazy" alt=""> $POWERED_BY$</div>
+</div>

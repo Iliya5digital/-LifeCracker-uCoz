@@ -1,0 +1,41 @@
+<div class="comment-item js-comm">
+<div class="comment-item__header d-flex ai-center">
+<div class="comment-item__img img-fit-cover js-comm-avatar"><img src="<?if($AVATAR_URL$)?>$AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" alt="<?if($USERNAME$)?>$USERNAME$<?else?>$NAME$<?endif?>"></div>
+<div class="comment-item__meta flex-grow-1">
+<div class="comment-item__author ws-nowrap js-comm-author <?if($GID$='4')?>comment-item__header--admin<?endif?>"><?if($USERNAME$)?><a href="$PROFILE_URL$">$USERNAME$</a><?else?>$NAME$<?endif?></div>
+<div class="comment-item__date ws-nowrap">$DATE$, $TIME$</div>
+</div>
+
+<div class="comment-item__rating ws-nowrap">
+<span class="comment-item__rating-caption">Согласны?</span>
+<?if($GOOD_COMMENT_URL$)?>
+<a href="$GOOD_COMMENT_URL$"><span>Да</span></a>
+<?if($COMMENT_RATING$ > 0)?>
+<span id="ratig-layer-$ID$" class="ignore-select">
+<span class="ratingtypeplusminus ignore-select <?if($COMMENT_RATING$<0)?>ratingminus<?else?><?if($COMMENT_RATING$>0)?>ratingplus<?endif?><?endif?>">$COMMENT_RATING$</span>
+</span>
+<?else?>
+$COMMENT_RATING$
+<?endif?>
+<a href="$BAD_COMMENT_URL$"><span>Нет</span></a>
+<?else?>
+<span style="color: #6ab04c; text-decoration: underline; font-weight: 400; margin-right: 2px;">Да</span>
+<?if($COMMENT_RATING$ > 0)?>
+<span id="ratig-layer-$ID$" class="ignore-select">
+<span class="ratingtypeplusminus ignore-select <?if($COMMENT_RATING$<0)?>ratingminus<?else?><?if($COMMENT_RATING$>0)?>ratingplus<?endif?><?endif?>">$COMMENT_RATING$</span>
+</span>
+<?else?>
+$COMMENT_RATING$
+<?endif?>
+<span style="color: #eb4d4b; text-decoration: underline; font-weight: 400; margin-right: 2px;">Нет</span>
+<?endif?>
+</div>
+
+</div>
+
+<?if($MODER_PANEL$)?><div style="float: right; padding: 5px;">$MODER_PANEL$</div><?endif?>
+<div class="comment-item__main full-text clearfix">$MESSAGE$</div>
+<div class="comment-item__footer d-flex ai-center">
+<?if($ANSWER_URL$)?><div class="comment-item__reply"><a href="$ANSWER_URL$">Ответить<span class="fal fa-angle-down"></span></a></div><?endif?>
+</div>
+</div>

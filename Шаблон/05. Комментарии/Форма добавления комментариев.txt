@@ -1,0 +1,49 @@
+<div class="form ac-form ignore-select">
+<?if($ERROR$)?>$ERROR$<?endif?>
+<style>.myWinError, .myWinSuccess { font-weight: bold; position: relative;bottom: 5px;}</style>
+
+<div class="ac-form__editor">
+<div style="display:none;">$BBCODES$</div>
+<div class="bb-editor ignore-select">
+<?if($BBCODES$)?>
+<div class="bb-pane">
+<b id="b_b" class="bb-btn" onclick="simpletag('b','','','message','')" title="Полужирный"></b>
+<b id="b_i" class="bb-btn" onclick="simpletag('i','','','message','')" title="Наклонный текст"></b>
+<b id="b_u" class="bb-btn" onclick="simpletag('u','','','message','')" title="Подчёркнутый текст"></b>
+<b id="b_s" class="bb-btn" onclick="simpletag('s','','','message','')" title="Зачёркнутый текст"></b>
+<span class="bb-sep"></span>
+<b id="b_left" class="bb-btn" onclick="simpletag('l','','','message','')" title="Выравнивание по левому краю"></b>
+<b id="b_center" class="bb-btn" onclick="simpletag('c','','','message','')" title="По центру"></b>
+<b id="b_right" class="bb-btn" onclick="simpletag('r','','','message','')" title="Выравнивание по правому краю"></b>
+<span class="bb-sep"></span>
+<b id="b_emo" class="bb-btn" onclick="new _uWnd('Sml',' ',-250,-350,{},{url:'/index/35-1-0'});return false;" title="Вставка смайликов" tabindex="-1"></b>
+<span class="bb-sep"></span>
+<b id="b_url" class="bb-btn" onclick="tag_url('message','')" title="Вставка ссылки"></b>
+<b id="b_mail" class="bb-btn" onclick="tag_email('message','')" title="Вставка Email адреса"></b>
+<b id="b_img" class="bb-btn" onclick="tag_image('message','')" title="Картинка"></b>
+<span class="bb-sep"></span>
+<b id="b_hide" class="bb-btn" onclick="simpletag('hide','','','message','')" title="Скрытый текст"></b>
+<b id="b_quote" class="bb-btn" onclick="simpletag('quote','','','message','')" title="Вставка цитаты"></b>
+<b id="b_spoiler" class="bb-btn" onclick="simpletag('spoiler','','','message','')" title="Вставка спойлера"></b>
+<b id="b_list" class="bb-btn" onclick="tag_list('message','')" title="List"></b>
+</div>
+<?endif?>
+</div>
+<textarea name="message" id="message" cols="70" rows="10">$MESSAGE$</textarea>
+</div>
+
+<?if($SECURITY_CODE$)?>
+<div class="form__row form__row--protect message-info d-none">
+<label class="form__label form__label--important" for="">Защита от спама</label>
+$SECURITY_CODE$
+</div>
+<?endif?>
+
+<div class="ac-form__bottom d-flex">
+<button class="ac-form__btn" name="submit" type="submit">Отправить</button>
+<?if(!$USER_LOGGED_IN$)?>
+<input class="ac-form__input flex-grow-1" type="text" maxlength="35" name="name" id="name" placeholder="Ваше имя" />
+<input class="ac-form__input flex-grow-1" type="text" maxlength="35" name="email" id="mail" placeholder="Ваш e-mail (необязательно)" />
+<?endif?>
+</div>
+</div>

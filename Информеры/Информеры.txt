@@ -1,0 +1,109 @@
+Информер #1
+[ Каталог файлов · Материалы · Количество просмотров D · Материалы: 5 · Колонки: 1 ]	
+
+Шаблон информера:
+<?if($NUMBER$='1')?>
+<div class="item anim tile">
+<a class="tile__img img-fit-cover img-mask" href="$ENTRY_URL$">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$" class="anim">
+<div class="item__title"><div class="line-clamp">$TITLE$</div></div>
+<div class="item__category pi-center yellow"><span class="fal fa-bolt"></span></div>
+</a>
+
+<div class="item__meta d-flex ai-center">
+<div class="item__meta-item bdl"><span class="fal fa-comment-alt-dots"></span><?if($COMMENTS_NUM$)?>$COMMENTS_NUM$<?else?>0<?endif?></div>
+<div class="item__meta-item hm"><span class="fal fa-calendar-alt"></span>$DATE$, $TIME$</div>
+<?if($CATEGORY_NAME$)?><div class="item__meta-item flex-grow-1 ws-nowrap bdl"><a href="$CATEGORY_URL$">$CATEGORY_NAME$</a></div><?endif?>
+</div>
+</div>
+<?else?>
+<div class="item anim grid-item">
+<div class="item__img img-responsive img-fit-cover">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$" class="anim">
+<div class="item__category pi-center"><span class="fal fa-hat-chef"></span></div>
+</div>
+
+<div class="item__meta d-flex ai-center">
+<div class="item__meta-item"><span class="fal fa-comment-alt-dots"></span><?if($COMMENTS_NUM$)?>$COMMENTS_NUM$<?else?>0<?endif?></div>
+<div class="item__meta-item"><span class="fal fa-calendar-alt"></span>$DATE$, $TIME$</div>
+<?if($CATEGORY_NAME$)?><div class="item__meta-item flex-grow-1 ws-nowrap bdl">$CATEGORY_NAME$</div><?endif?>
+</div>
+<a class="item__title expand-link" href="$ENTRY_URL$"><div class="line-clamp">$TITLE$</div></a>
+</div>
+<?endif?>
+
+-------------------------------------------------------------------------------------
+
+Информер #2
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 6 · Колонки: 1 ]	
+
+Шаблон информера:
+<a class="choose img-fit-cover img-mask" href="$ENTRY_URL$">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$" class="anim">
+<div class="choose__title line-clamp">$TITLE$</div>
+</a>
+
+-------------------------------------------------------------------------------------
+
+Информер #3
+[ Каталог файлов · Материалы · Рейтинг материала D · Материалы: 6 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="int d-flex ai-center">
+<div class="int__img img-fit-cover"><img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$"></div>
+<div class="int__desc flex-grow-1"><a class="int__title expand-link" href="$ENTRY_URL$"><div class="line-clamp">$TITLE$</div></a></div>
+</div>
+
+-------------------------------------------------------------------------------------
+
+Информер #4
+[ Комментарии · Все модули · Дата добавления материала D · Материалы: 3 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="lcomm js-comm">
+<a class="ltitle expand-link" href="$ENTRY_URL$"><div class="line-clamp">$ENTRY_TITLE$</div></a>
+<div class="lmeta d-flex ai-center"> 
+<div class="lav img-fit-cover js-comm-avatar"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" loading="lazy" alt="$USERNAME$"></div>
+<div class="lname js-comm-author flex-grow-1 ws-nowrap">$USERNAME$</div>
+<div class="ldate">$DATE$, $TIME$</div>
+</div>
+<div class="ltext"><?if(len($MESSAGE$)>80)?><?substr($MESSAGE$,0,77)?>...<?else?>$MESSAGE$<?endif?></div>
+</div>
+
+-------------------------------------------------------------------------------------
+
+Информер #5
+[ Каталог файлов · · В случайном порядке · Материалы: 3 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="int d-flex ai-center">
+<div class="int__img img-fit-cover"><img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$"></div>
+<div class="int__desc flex-grow-1"><a class="int__title expand-link" href="$ENTRY_URL$"><div class="line-clamp">$TITLE$</div></a></div>
+</div>
+
+-------------------------------------------------------------------------------------
+
+Информер #6
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 15 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="fresh d-flex ai-center">
+<a class="fresh__title expand-link" href="$ENTRY_URL$">$TITLE$</a>
+<div class="item__meta d-flex ai-center">
+<div class="item__meta-item">$DATE$, $TIME$</div>
+<?if($CATEGORY_NAME$)?><div class="item__meta-item flex-grow-1 ws-nowrap"><a href="$CATEGORY_URL$">$CATEGORY_NAME$</a></div><?endif?>
+</div>
+</div>
+
+-------------------------------------------------------------------------------------
+
+Информер #7
+[ Каталог файлов · · В случайном порядке · Материалы: 4 · Колонки: 1 ]
+
+Шаблон информера:
+<div class="int d-flex ai-center">
+<div class="int__img img-fit-cover"><img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$"></div>
+<div class="int__desc flex-grow-1"><a class="int__title expand-link" href="$ENTRY_URL$"><div class="line-clamp">$TITLE$</div></a></div>
+</div>
+
+-------------------------------------------------------------------------------------

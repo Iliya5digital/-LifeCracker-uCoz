@@ -1,0 +1,13 @@
+<div class="item d-flex ai-center short">
+<div class="short__img img-fit-cover"><img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$" class="anim"></div>
+
+<div class="short__desc flex-grow-1">
+<a class="short__title expand-link color__bold" href="$ENTRY_URL$"><div class="line-clamp"><?if(len($TITLE$)>55)?><?substr($TITLE$,0,52)?>...<?else?>$TITLE$<?endif?></div></a>
+<div class="color__black item__meta d-flex ai-center shorts__amedia"><?if(len($MESSAGE$)>200)?><?substr($MESSAGE$,0,197)?>...<?else?>$MESSAGE$<?endif?></div>
+<div class="item__meta d-flex ai-center">
+<div class="item__meta-item bdl"><span class="fal fa-comment-alt-dots"></span><?if($COMMENTS_NUM$)?>$COMMENTS_NUM$<?else?>0<?endif?></div>
+<div class="item__meta-item hm"><span class="fal fa-calendar-alt"></span>$DATE$, $TIME$</div>
+<?if($CATEGORY_NAME$)?><div class="item__meta-item flex-grow-1 ws-nowrap bdl">$CATEGORY_NAME$</div><?endif?>
+</div>
+</div>
+</div>

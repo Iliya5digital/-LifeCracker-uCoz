@@ -1,0 +1,82 @@
+<html lang="ru">
+<head>
+<title>Список пользователей</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#362e3d">
+<link rel="preload" href="/css/common.css" as="style">
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/css/engine.css" as="style">
+<link rel="preload" href="/css/fontawesome.css" as="style">
+
+<link rel="preload" href="/webfonts/arsenal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/arsenal-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin>
+
+<link type="text/css" rel="stylesheet" href="/_st/my.css" />
+<link rel="shortcut icon" href="/images/favicon.svg" />
+</head>
+
+<body>
+<div class="wrapper">
+<div class="wrapper-container wrapper-main">
+<header class="header">
+$GLOBAL_AHEADER$
+</header> <!-- END HEADER -->
+
+<div class="content">
+
+<div class="cols">
+<main class="col-main">
+<div class="sect">
+<div class="sect__content">
+<div align="center">$BODY$</div><hr />
+<div align="center">$USERS_SEARCH_FORM$</div>
+<?if($PAGE_SELECTOR$)?><div class="pagination ignore-select" id="pagination"><div class="pagination__pages d-flex jc-center">$PAGE_SELECTOR$</div></div><?endif?>
+</div>
+</div>
+</main>
+
+<aside class="col-side">
+$GLOBAL_CLEFTER$
+</aside>
+</div>
+
+</div> <!-- END CONTENT -->
+
+<footer class="footer vw100">
+$GLOBAL_BFOOTER$
+</footer> <!-- END FOOTER -->
+
+</div> <!-- END WRAPPER-MAIN -->
+</div> <!-- END WRAPPER -->
+
+<?if($USER_LOGGED_IN$)?>
+<div class="login login--logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__avatar img-fit-cover"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?><?endif?>" title="$USERNAME$" alt="$USERNAME$" /></div>
+<div class="login__title stretch-free-width ws-nowrap">$USERNAME$ <?if($USER_GROUP$='Администраторы')?><a href="/panel/" target="_blank">Админка</a><?endif?></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<ul class="login__content login__menu d-flex jc-space-between">
+<?if($ADD_ENTRY_LINK$)?><li><a href="$ADD_ENTRY_LINK$"><span class="fal fa-plus"></span>Добавить пост</a></li><?endif?>
+<li><a href="$PERSONAL_PAGE_LINK$"><span class="fal fa-address-card"></span>Мой профиль</a></li>
+<li><a href="$PM_URL$"><span class="fal fa-envelope"></span>Сообщения: ($IS_NEW_PM$)</a></li>
+<li><a href="/index/11"><span class="fal fa-cog"></span>Настройки</a></li>
+<li><a href="/index/34-$USER_ID$"><span class="fal fa-comments"></span>Мои комментарии</a></li>
+<li><a href="$LOGOUT_LINK$"><span class="fal fa-sign-out"></span>Выйти</a></li>
+</ul>
+</div>
+<?else?>
+<div class="login login--not-logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__title stretch-free-width ws-nowrap">Войти <a href="$REGISTER_LINK$">Регистрация</a></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+$LOGIN_FORM$
+</div>
+<?endif?>
+<script src="/js/libs.js"></script>
+</body>
+</html>

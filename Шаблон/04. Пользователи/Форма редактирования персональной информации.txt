@@ -1,0 +1,141 @@
+<div class="form" id="useredit">
+<h2 class="form__title">Редактирование профиля:</h2>
+<?if($ERROR$)?>
+<div class="message-info">
+<div class="message-info__title">Ошибка</div>
+<div class="message-info__content">$ERROR$</div>
+</div>
+<?endif?>
+<?if($LOGIN_FL$)?>
+<div class="form__row">
+<label>$LOGIN_SIGN$</label>
+$LOGIN_FL$
+</div>
+<?endif?>
+<?if($PASSWORD_FL$)?>
+<div class="form__row">
+<label>$PASSWORD_SIGN$</label>
+$PASSWORD_FL$
+</div>
+<?endif?>
+<?if($PASSWORD1_FL$)?>
+<div class="form__row">
+<label>$PASSWORD1_SIGN$</label>
+$PASSWORD1_FL$
+</div>
+<?endif?>
+<?if($GROUP_FL$)?>
+<div class="form__row">
+<label>$GROUP_SIGN$</label>
+$GROUP_FL$
+</div>
+<?endif?>
+<?if($NAME_FL$)?>
+<div class="form__row">
+<label>$NAME_SIGN$</label>
+$NAME_FL$
+</div>
+<?endif?>
+<?if($EMAIL_FL$)?>
+<div class="form__row">
+<label>$EMAIL_SIGN$</label>
+$EMAIL_FL$
+</div>
+<?endif?>
+<?if($WWW_FL$)?>
+<div class="form__row">
+<label>$WWW_SIGN$</label>
+$WWW_FL$
+</div>
+<?endif?>
+<?if($ICQ_FL$)?>
+<div class="form__row">
+<label>$ICQ_SIGN$</label>
+$ICQ_FL$
+</div>
+<?endif?>
+<?if($JABBER_FL$)?>
+<div class="form__row">
+<label>$JABBER_SIGN$</label>
+$JABBER_FL$
+</div>
+<?endif?>
+<?if($SKYPE_FL$)?>
+<div class="form__row">
+<label>$SKYPE_SIGN$</label>
+$SKYPE_FL$
+</div>
+<?endif?>
+<?if($YAHOO_FL$)?>
+<div class="form__row">
+<label>$YAHOO_SIGN$</label>
+$YAHOO_FL$
+</div>
+<?endif?>
+<?if($PHONE_FL$)?>
+<div class="form__row">
+<label>$PHONE_SIGN$</label>
+$PHONE_FL$
+</div>
+<?endif?>
+<?if($BIRTHDAY_FL$)?>
+<div class="form__row">
+<label>$BIRTHDAY_SIGN$</label>
+$BIRTHDAY_FL$
+</div>
+<?endif?>
+<?if($GENDER_FL$)?>
+<div class="form__row">
+<label>$GENDER_SIGN$</label>
+$GENDER_FL$
+</div>
+<?endif?>
+<?if($COUNTRY_FL$)?>
+<div class="form__row">
+<label>$COUNTRY_SIGN$</label>
+$COUNTRY_FL$
+</div>
+<?endif?>
+<?if($STATE_FL$)?>
+<div class="form__row">
+<label>$STATE_SIGN$</label>
+$STATE_FL$
+</div>
+<?endif?>
+<?if($CITY_FL$)?>
+<div class="form__row">
+<label>$CITY_SIGN$</label>
+$CITY_FL$
+</div>
+<?endif?>
+<?if($AVATAR_FL$)?>
+<div class="form__row">
+<label>$AVATAR_SIGN$</label>
+$AVATAR_FL$
+</div>
+<?endif?>
+<?if($SIGNATURE_FL$)?>
+<div class="form__row form__row--textarea">
+<label class="form__label">$SIGNATURE_SIGN$:</label>
+$SIGNATURE_FL$
+</div>
+<?endif?>
+<?if($SUBSCRIPTION_FL$)?>
+<div class="form__row">
+<label>$SUBSCRIPTION_SIGN$</label>
+$SUBSCRIPTION_FL$
+</div>
+<?endif?>
+<?if($OPTIONS_FL$)?><div class="form__row form__row--check-group form__row--check-group-wide"><div class="checkbox">$OPTIONS_FL$</div></div><?endif?>
+<?if($SECURITY_CODE_FL$)?>
+<div class="form__row form__row--protect">
+<label class="form__label" for="">$SECURITY_CODE_SIGN$</label>
+$SECURITY_CODE_FL$
+</div>
+<?endif?>
+
+<div class="form__row form__row--submit">
+<button class="form__btn" name="submit" type="submit">$SUBMIT_SIGN$</button>
+</div>
+
+</div>

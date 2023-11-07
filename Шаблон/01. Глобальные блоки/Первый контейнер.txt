@@ -1,0 +1,11 @@
+<div class="side-block">
+<div class="side-block__title">Новые комментарии</div>
+<div class="side-block__content">$MYINF_4$</div>
+</div>
+
+<div class="side-block">
+<div class="side-block__title">Популярные новости</div>
+<div class="side-block__content">$MYINF_3$</div>
+</div>
+
+<div class="side-block side-block--sticky"><img src="/images/rkl.png" loading="lazy" alt=""></div>

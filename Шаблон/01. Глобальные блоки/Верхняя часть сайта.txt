@@ -1,0 +1,68 @@
+<div class="header__one d-flex ai-center">
+<a href="/" class="logo header__logo">$SITE_NAME$</a>
+<ul class="nav__list d-flex flex-grow-1 js-this-in-mobile-menu">
+<li><a href="#">Финансы</a></li>
+<li class="submenu">
+<a href="#">Бизнес</a>
+<ul class="nav__list-hidden">
+<li><a href="#">Наука и техника</a></li>
+<li><a href="#">Спорт</a></li>
+<li><a href="#">Культура</a></li>
+<li><a href="#">Ценности</a></li>
+<li><a href="#">Развлечения</a></li>
+<li><a href="#">Из жизни</a></li>
+</ul>
+</li>
+
+<li><a href="#">Наука и техника</a></li>
+<li><a href="#">Спорт</a></li>
+<li><a href="#">Культура</a></li>
+<li><a href="#">Развлечения</a></li>
+</ul>
+
+<button class="header__btn-search js-show-search"><span class="fal fa-search"></span></button>
+<?if($USER_LOGGED_IN$)?>
+<button class="header__btn-login js-show-login"><span class="fal fa-cog"></span><span>Кабинет</span></button>
+<?else?>
+<button class="header__btn-login js-show-login"><span class="fal fa-user"></span><span>Войти</span></button>
+<?endif?>
+
+<button class="header__btn-menu d-none js-show-mobile-menu"><span class="fal fa-bars"></span></button>
+
+<div class="header__search search-block d-none">
+<form id="quicksearch" onsubmit="this.sfSbm.disabled=true" method="post" action="/load">
+<input type="hidden" name="do" value="search">
+<input type="hidden" name="subaction" value="search">
+<input type="hidden" name="a" value="2">
+<input class="search-block__input" id="story" name="query" placeholder="Поиск по сайту..." type="text" autocomplete="off">
+<button name="sfSbm" class="search-block__btn" type="submit"><span class="fal fa-search"></span></button>
+</form>
+</div>
+
+</div>
+
+<div class="header__two d-flex ai-center">
+<ul class="nav__list d-flex js-this-in-mobile-menu">
+<li><a href="#">Финансы</a></li>
+<li class="submenu">
+<a href="#">Бизнес</a>
+<ul class="nav__list-hidden">
+<li><a href="#">Наука и техника</a></li>
+<li><a href="#">Спорт</a></li>
+<li><a href="#">Культура</a></li>
+<li><a href="#">Ценности</a></li>
+<li><a href="#">Развлечения</a></li>
+<li><a href="#">Из жизни</a></li>
+</ul>
+</li>
+
+<li><a href="#">Наука и техника</a></li>
+<li><a href="#">Спорт</a></li>
+<li><a href="#">Культура</a></li>
+<li><a href="#">Ценности</a></li>
+<li><a href="#">Развлечения</a></li>
+<li><a href="#">Из жизни</a></li>
+<li><a href="#">Спорт</a></li>
+<li><a href="#">Культура</a></li>
+</ul>
+</div>

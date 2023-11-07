@@ -1,0 +1,9 @@
+<table border="0" width="100%" id="table1" cellspacing="1" cellpadding="2">
+<tr style="display:none;"><input type="hidden" type="text" name="f1" size="30" style="width:95%;" maxlength="70" value="sobaka@mail.ru" placeholder="E-mail"></tr>
+<tr style="display:none;"><input type="hidden" type="text" name="f2" size="30" style="width:95%;" maxlength="70" value="Сообщить об ошибке"></tr>
+<tr><textarea rows="7" class="form-control" name="f3" cols="30" style="width:95%;" required placeholder="Опишите, пожалуйста, подробно где вы нашли ошибку и как должно быть правильно."></textarea></tr>
+<tr><input id="location" type="hidden" type="text" class="form-control" name="f4" size="30" style="width:95%;" maxlength="70" placeholder="ссылка на страницу"></tr>
+<tr><input class="form-control" type="submit" value="Отправить" style="margin-top: 10px;"></tr>
+</table>
+
+<script type="text/javascript">$('#location').val(location.href);</script> 
